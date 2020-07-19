@@ -1,5 +1,6 @@
 """
-10:27
+Attempt 1: 10:27, 9 min
+Attempt 2: 3:10, 4:16, 66 min #Attempted by determining digit count of input via string conversion
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 Example 1:
@@ -24,11 +25,35 @@ Total Time: 9 min
 """
 class Solution:
     def isPalindrome(self, x):
-        x_str = str(x)
-        return x_str == x_str[::-1]
+        if x < 0:
+            return False
+        y = 0
+        new_x = x
+        while True:
+            y = y*10 + new_x % 10
+            if len(str(x)) % 2 == 0:
+                new_x = new_x/10
+                if y > new_x:
+                    return False
+                elif y == new_x:
+                    return True
+            else:
+                if y > new_x:
+                    return False
+                elif y == new_x:
+                    return True
+                new_x = new_x/10
 
 obj = Solution()
 
-print(obj.isPalindrome(121))
+print(obj.isPalindrome(121) == True)
 
-print(obj.isPalindrome(122))
+print(obj.isPalindrome(122) == False)
+
+print(obj.isPalindrome(1221) == True)
+
+print(obj.isPalindrome(12221) == True)
+
+print(obj.isPalindrome(0) == True)
+
+print(obj.isPalindrome(12) == True)
