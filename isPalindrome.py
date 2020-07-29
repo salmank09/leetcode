@@ -53,14 +53,18 @@ class Solution:
 
 obj = Solution()
 
-print(obj.isPalindrome(121) == True)
+# print(obj.isPalindrome(121) == True)
+#
+# print(obj.isPalindrome(122) == False)
+#
+# print(obj.isPalindrome(1221) == True)
+#
+# print(obj.isPalindrome(12221) == True)
+#
+# print(obj.isPalindrome(0) == True)
+#
+# print(obj.isPalindrome(12) == False)
 
-print(obj.isPalindrome(122) == False)
+print(obj.isPalindrome(11) == True)
 
-print(obj.isPalindrome(1221) == True)
-
-print(obj.isPalindrome(12221) == True)
-
-print(obj.isPalindrome(0) == True)
-
-print(obj.isPalindrome(12) == False)
+print(obj.isPalindrome(1000000) == False)
